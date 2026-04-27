@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="三大小ジュニアバレーボールクラブの案内資料。活動内容や方針をまとめた入部検討者向けのご案内です。">
+  <meta property="og:title" content="クラブ案内｜三大小ジュニアバレーボールクラブ">
+  <meta property="og:description" content="三大小ジュニアバレーボールクラブの活動内容や方針をまとめた案内資料です。">
+  <meta property="og:type" content="website">
+  <title>クラブ案内｜三大小ジュニアバレーボールクラブ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #f1f5f9 0%, #eff6ff 50%, #ecfeff 100%);
+      color: #1e293b;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ヘッダー */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #172554 0%, #1e1b4b 50%, #172554 100%);
+      overflow: hidden;
+      padding: 3rem 1rem 2.5rem;
+      text-align: center;
+    }
+    .hero::before, .hero::after {
+      content: '';
+      position: absolute;
+      width: 24rem;
+      height: 24rem;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.15;
+    }
+    .hero::before { top: -8rem; left: 25%; background: #22d3ee; }
+    .hero::after { bottom: -8rem; right: 25%; background: #60a5fa; }
+    .hero-inner { position: relative; max-width: 60rem; margin: 0 auto; }
+    .hero-badge {
+      display: inline-block;
+      padding: 0.25rem 1rem;
+      border: 1px solid rgba(103, 232, 249, 0.3);
+      border-radius: 9999px;
+      background: linear-gradient(90deg, rgba(6,182,212,0.2), rgba(59,130,246,0.2));
+      color: #67e8f9;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      margin-bottom: 0.75rem;
+    }
+    .hero-title {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.125rem);
+      font-weight: 700;
+      background: linear-gradient(90deg, #6ee7b7, #34d399);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    .hero-desc {
+      max-width: 36rem;
+      margin: 0 auto;
+      font-size: 0.875rem;
+      color: rgba(191, 219, 254, 0.7);
+    }
+
+    /* メインコンテンツ */
+    .container { max-width: 64rem; margin: 0 auto; padding: 1.5rem 1rem; }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.04);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ボタン */
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    @media (min-width: 640px) {
+      .button-group { flex-direction: row; }
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.15);
+      transition: all 0.3s;
+      color: #fff;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: linear-gradient(90deg, #10b981, #16a34a); }
+    .btn-primary:hover { background: linear-gradient(90deg, #059669, #15803d); }
+    .btn-secondary { background: linear-gradient(90deg, #2563eb, #4f46e5); }
+    .btn-secondary:hover { background: linear-gradient(90deg, #1d4ed8, #4338ca); }
+    .btn-line { background: #06C755; }
+    .btn-line:hover { background: #05b04c; }
+    .btn-outline {
+      background: linear-gradient(90deg, #172554, #1e1b4b);
+      border: 2px solid rgba(103, 232, 249, 0.4);
+    }
+    .btn-outline:hover { border-color: rgba(103, 232, 249, 0.7); }
+    .btn-outline span {
+      background: linear-gradient(90deg, #67e8f9, #93c5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn svg { width: 1.25rem; height: 1.25rem; }
+    .btn-help {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: #475569;
+      margin-top: 0.75rem;
+    }
+
+    /* PDF プレビュー */
+    .pdf-card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08), 0 10px 10px -5px rgba(0,0,0,0.04);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .pdf-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(90deg, #172554, #1e1b4b);
+      padding: 0.75rem 1rem;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+    .pdf-header svg { width: 1.25rem; height: 1.25rem; color: #67e8f9; }
+    .pdf-frame {
+      position: relative;
+      background: #f1f5f9;
+      height: 80vh;
+      min-height: 600px;
+    }
+    .pdf-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .pdf-mobile-fallback {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #475569;
+    }
+    .pdf-mobile-fallback svg { width: 3rem; height: 3rem; color: #94a3b8; margin-bottom: 1rem; }
+
+    /* 問い合わせ */
+    .contact-card {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.08);
+    }
+    .contact-card h2 {
+      font-size: clamp(1.125rem, 3vw, 1.5rem);
+      font-weight: 700;
+      color: #1f2937;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+    .contact-card p {
+      font-size: 0.9375rem;
+      color: #374151;
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.8125rem;
+      color: #64748b;
+    }
+
+    /* スマホでiframeが読みにくい場合のフォールバック */
+    @media (max-width: 640px) {
+      .pdf-frame { height: 60vh; min-height: 400px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">CLUB GUIDE</div>
+      <h1 class="hero-title">クラブ案内</h1>
+      <p class="hero-subtitle">三大小ジュニアバレーボールクラブ</p>
+      <p class="hero-desc">入部をご検討の方・クラブにご関心のある方へ。チームの活動内容や方針をまとめた案内資料をご覧いただけます。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="button-group">
+        <a class="btn btn-primary" href="sandai-junior-club-guide.pdf" download="三大小ジュニア_クラブ案内資料.pdf">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+          </svg>
+          <span>PDFをダウンロード</span>
+        </a>
+        <a class="btn btn-secondary" href="sandai-junior-club-guide.pdf" target="_blank" rel="noopener">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+          <span>新しいタブで開く</span>
+        </a>
+      </div>
+      <p class="btn-help">スマートフォンの方はダウンロードしてからの閲覧がおすすめです</p>
+    </section>
+
+    <section class="pdf-card">
+      <div class="pdf-header">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <span>案内資料プレビュー</span>
+      </div>
+      <div class="pdf-frame">
+        <iframe src="sandai-junior-club-guide.pdf#view=FitH" title="クラブ案内資料"></iframe>
+      </div>
+    </section>
+
+    <section class="contact-card">
+      <h2>ご興味を持っていただいた方へ</h2>
+      <p>体験参加・入部のご相談はLINE公式アカウントまたは公式ホームページよりお気軽にお問い合わせください。</p>
+      <div class="button-group">
+        <a class="btn btn-line" href="https://lin.ee/q1oRpNw" target="_blank" rel="noopener">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016a.63.63 0 01-.631.629.625.625 0 01-.51-.252l-2.443-3.317v2.94a.63.63 0 01-1.262 0V8.108a.629.629 0 01.629-.63c.198 0 .375.105.483.252l2.469 3.33V8.108a.63.63 0 011.265 0v4.771zm-5.741 0a.629.629 0 01-.626.629.629.629 0 01-.629-.629V8.108a.628.628 0 01.629-.63c.346 0 .626.285.626.63v4.771zm-2.466.629H4.917a.625.625 0 01-.626-.629V8.108c0-.345.281-.63.63-.63.346 0 .627.285.627.63v4.141h1.755c.348 0 .629.283.629.63a.633.633 0 01-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"></path>
+          </svg>
+          <span>LINEで問い合わせ</span>
+        </a>
+        <a class="btn btn-outline" href="https://sandai-jvc.com/" target="_blank" rel="noopener">
+          <svg fill="none" stroke="#22d3ee" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+          <span>公式ホームページ</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 三大小ジュニアバレーボールクラブ
+  </footer>
+</body>
+</html>
